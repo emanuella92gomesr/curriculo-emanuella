@@ -10,6 +10,7 @@ const socialNetworks = [
 
 const SocialNetworks = () => {
     return(
+        // Do not forget to include the social networks links
         <section id='social-networks'>
             {socialNetworks.map((network) => (
                 <a 
