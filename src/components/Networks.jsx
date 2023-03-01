@@ -3,21 +3,21 @@ import { FaLinkedinIn, FaGithub, FaInstagram } from 'react-icons/fa';
 import '../styles/components/socialnetworks.sass';
 
 const socialNetworks = [
-    { name: "linkedin", icon: <FaLinkedinIn />},
-    { name: "github", icon: <FaGithub />},
-    { name: "instagram", icon: <FaInstagram />},
+    { name: "linkedin", icon: <FaLinkedinIn />, link: "https://www.linkedin.com/in/emanuellagomesr/"},
+    { name: "github", icon: <FaGithub />, link: "https://github.com/emanuella92gomesr"},
+    { name: "instagram", icon: <FaInstagram />, link: "https://www.instagram.com/emanuella92gomes/"},
 ];
 
 const SocialNetworks = () => {
     return(
-        // Do not forget to include the social networks links
         <section id='social-networks'>
             {socialNetworks.map((network) => (
                 <a 
-                    href="#" 
+                    href={network.link} 
                     className='social-btn' 
                     id={network.name} 
                     key={network.name}
+                    target="_blank"
                 >
                     {network.icon}
                 </a>
